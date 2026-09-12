@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+# Personal snapshots and machine-specific configuration never belong in this repository.
+backups/
+verification/
+*.tar.gz

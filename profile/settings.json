@@ -1,0 +1,129 @@
+{
+  "currentThemeName": "custom",
+  "currentThemeCategory": "generic",
+  "customThemeFile": "@THEME@",
+  "runDmsMatugenTemplates": false,
+  "runUserMatugenTemplates": false,
+  "cornerRadius": 20,
+  "niriLayoutGapsOverride": 10,
+  "niriLayoutRadiusOverride": 16,
+  "niriLayoutBorderSize": 2,
+  "fontFamily": "Noto Sans",
+  "monoFontFamily": "CaskaydiaMono Nerd Font Mono",
+  "fontWeight": 400,
+  "fontScale": 1.0,
+  "widgetBackgroundColor": "sch",
+  "widgetColorMode": "default",
+  "controlCenterTileColorMode": "primary",
+  "buttonColorMode": "primary",
+  "popupTransparency": 1.0,
+  "animationSpeed": 1,
+  "animationVariant": 0,
+  "motionEffect": 0,
+  "enableRippleEffects": true,
+  "showWorkspaceIndex": false,
+  "showWorkspaceName": false,
+  "showWorkspaceApps": false,
+  "maxWorkspaceIcons": 3,
+  "workspaceColorMode": "default",
+  "workspaceOccupiedColorMode": "none",
+  "workspaceUnfocusedColorMode": "default",
+  "frameEnabled": false,
+  "showDock": false,
+  "barElevationEnabled": true,
+  "barConfigs": [
+    {
+      "id": "celeste",
+      "name": "Celeste",
+      "enabled": true,
+      "island": true,
+      "position": 0,
+      "screenPreferences": [
+        "all"
+      ],
+      "showOnLastDisplay": true,
+      "leftWidgets": [
+        "launcherButton",
+        "workspaceSwitcher"
+      ],
+      "centerWidgets": [
+        "music",
+        "clock"
+      ],
+      "rightWidgets": [
+        "systemTray",
+        "notificationButton",
+        "battery",
+        "controlCenterButton"
+      ],
+      "spacing": 6,
+      "innerPadding": 4,
+      "barLengthPadding": 10,
+      "bottomGap": 8,
+      "attachToScreenEdge": false,
+      "transparency": 1.0,
+      "widgetTransparency": 1.0,
+      "squareCorners": false,
+      "noBackground": false,
+      "widgetPadding": 8,
+      "fontScale": 1.0,
+      "iconScale": 1.0,
+      "autoHide": false,
+      "visible": true,
+      "popupGapsAuto": true,
+      "scrollEnabled": true,
+      "scrollXBehavior": "column",
+      "scrollYBehavior": "workspace",
+      "clickThrough": false,
+      "islandFloating": true,
+      "islandUseOverlayLayer": false,
+      "islandReserveThickness": 60,
+      "islandCompactThickness": 48,
+      "islandOuterGap": 8,
+      "islandPalette": "default",
+      "islandTransparency": 1,
+      "islandCornerRadius": 22,
+      "islandInteractionMode": "click",
+      "islandSatellitesEnabled": true,
+      "islandSatellitePosition": "edges",
+      "islandSatelliteGap": 12,
+      "islandSatelliteBackground": true,
+      "islandSatelliteGothCorners": false,
+      "islandHomeLayout": [
+        {
+          "id": "media",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": false
+        },
+        {
+          "id": "status",
+          "enabled": true
+        },
+        {
+          "id": "volume",
+          "enabled": true
+        },
+        {
+          "id": "brightness",
+          "enabled": true
+        },
+        {
+          "id": "notifications",
+          "enabled": true
+        }
+      ],
+      "islandHomeCompactTight": false,
+      "islandHomeClockDisplay": "both",
+      "islandHomeVolumeDisplay": "both",
+      "islandHomeBrightnessDisplay": "both"
+    }
+  ],
+  "clockDateFormat": "dddd, MMMM d"
+}
