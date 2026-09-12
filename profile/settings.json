@@ -56,16 +56,16 @@
         "battery",
         "controlCenterButton"
       ],
-      "spacing": 6,
-      "innerPadding": 4,
+      "spacing": 2,
+      "innerPadding": 1,
       "barLengthPadding": 10,
-      "bottomGap": 8,
+      "bottomGap": 4,
       "attachToScreenEdge": false,
       "transparency": 1.0,
       "widgetTransparency": 1.0,
       "squareCorners": false,
       "noBackground": false,
-      "widgetPadding": 8,
+      "widgetPadding": 4,
       "fontScale": 1.0,
       "iconScale": 1.0,
       "autoHide": false,
@@ -77,16 +77,16 @@
       "clickThrough": false,
       "islandFloating": true,
       "islandUseOverlayLayer": false,
-      "islandReserveThickness": 60,
-      "islandCompactThickness": 48,
-      "islandOuterGap": 8,
+      "islandReserveThickness": 52,
+      "islandCompactThickness": 26,
+      "islandOuterGap": 16,
       "islandPalette": "default",
       "islandTransparency": 1,
-      "islandCornerRadius": 22,
+      "islandCornerRadius": 16,
       "islandInteractionMode": "click",
       "islandSatellitesEnabled": true,
       "islandSatellitePosition": "edges",
-      "islandSatelliteGap": 12,
+      "islandSatelliteGap": 8,
       "islandSatelliteBackground": true,
       "islandSatelliteGothCorners": false,
       "islandHomeLayout": [
@@ -104,19 +104,19 @@
         },
         {
           "id": "status",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "volume",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "brightness",
-          "enabled": true
+          "enabled": false
         },
         {
           "id": "notifications",
-          "enabled": true
+          "enabled": false
         }
       ],
       "islandHomeCompactTight": false,

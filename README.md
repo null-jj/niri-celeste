@@ -69,7 +69,7 @@ Changing a wallpaper with IPC is not rolled back by this command; reselect your 
 
 - Edit `themes/celeste/theme.json` for both palettes.
 - Edit `profile/settings.json` for typography, spacing, motion, and bar composition; then run plan/apply.
-- The center Island uses a full weekday/month date, volume and brightness readouts, and a 48px compact thickness. DMS sizes its width to its content; disable those readouts in `islandHomeLayout` for a smaller pill.
+- The center Island uses media and a full weekday/month date, with 12px group spacing, a slim pill, and a 16px top gap. Battery, volume, brightness, and notifications stay in the right-side controls. DMS sizes the center width to its content; customize its groups in `islandHomeLayout`.
 - For a conventional full bar, set `barConfigs[0].island` to `false` in the profile. The same widget layout is supplied for that mode.
 - For reduced motion, use DMS's accessibility settings, or add top-level `"reduceMotion": true` plus `"islandReducedMotion": true` inside the bar entry in your profile.
 - Use DMS settings to select dark/light mode. Celeste preserves your current preference.
