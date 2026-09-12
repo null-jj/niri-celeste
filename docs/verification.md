@@ -24,7 +24,7 @@ Use a running Niri/DMS session. Web browser automation cannot verify QML layer-s
 
 Verified locally on Arch Linux, Niri 26.04, DMS 1.6.1, Quickshell 0.3.1, and Python 3.14.7 on 2026-09-12:
 
-- All 20 automated installer/profile tests pass, including injected transaction failures, XDG fallbacks, and sparse-settings restoration.
+- All 24 automated installer/profile tests pass, including injected transaction failures, XDG fallbacks, sparse-settings restoration, named-theme switching, and rejection of invalid theme paths.
 - Starter Niri config and existing live Niri config validate.
 - Real installer plan/apply/reapply/restore succeeds in isolated directories with spaces in their paths, including fresh `--with-niri` installation and removal.
 - Live restore returns the previous theme; reapply restores Celeste. Repeat apply reports unchanged after DMS has loaded and normalized the settings.
@@ -32,6 +32,7 @@ Verified locally on Arch Linux, Niri 26.04, DMS 1.6.1, Quickshell 0.3.1, and Pyt
 - Native screenshots confirm wallpaper and Island surfaces on 3440×1440 and 1920×1080 displays at scale 1.
 - Launcher, control center, and notifications open and close on the 1920×1080 display without clipping. Closing them removes exclusive shell keyboard focus. Workspace switching was exercised and the original active workspaces were restored.
 - Dark and light shell palettes render. Both palettes' main text pairs meet the automated 4.5:1 contrast threshold.
+- Ocean, Forest, Ember, Rose, and Graphite were each applied live, viewed in both dark and light mode, and restored to the previous palette. All six theme families supply complete paired palettes, and all main text pairs pass the 4.5:1 contrast check. Celeste Night was restored after verification.
 - DMS remains active; its journal had no warning-or-higher entries during the final verification window.
 
 Not verified: a fresh physical-machine login, authentication/lock-unlock, suspend/resume, monitor hotplug, fractional scaling, hardware control changes, or CI on GitHub. These are upstream/hardware integration checks; no custom implementation of those systems is bundled. Existing lock/idle service ownership was preserved.

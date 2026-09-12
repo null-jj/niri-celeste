@@ -41,6 +41,38 @@ class InstallerTests(unittest.TestCase):
     def settings(self):
         return self.config / "DankMaterialShell/settings.json"
 
+    def test_theme_switch_is_reversible_and_repeat_apply_is_unchanged(self):
+        selected = installer.PROFILE_THEME.parent.parent / "ocean/theme.json"
+        selected.parent.mkdir()
+        selected.write_text('{"dark":{"name":"Ocean Night"},"light":{"name":"Ocean Day"}}\n')
+        installer.apply(self.config, self.state, False)
+        theme = self.config / installer.THEME_REL
+        settings_before = self.settings().read_bytes()
+        original = theme.read_bytes()
+        installer.apply(self.config, self.state, False, "ocean")
+        self.assertEqual(theme.read_bytes(), selected.read_bytes())
+        self.assertEqual(self.settings().read_bytes(), settings_before)
+        backups = list((self.state / "niri-celeste/backups").iterdir())
+        installer.apply(self.config, self.state, False, "ocean")
+        self.assertEqual(list((self.state / "niri-celeste/backups").iterdir()), backups)
+        installer.restore(self.config, self.state)
+        self.assertEqual(theme.read_bytes(), original)
+        self.assertEqual(self.settings().read_bytes(), settings_before)
+
+    def test_invalid_theme_cannot_change_files(self):
+        for name in ("missing", "../celeste", "/tmp/celeste"):
+            with self.subTest(name=name), self.assertRaisesRegex(installer.InstallError, "unknown theme"):
+                installer.apply(self.config, self.state, False, name)
+        self.assertFalse(self.config.exists())
+        self.assertFalse(self.state.exists())
+
+    def test_theme_selection_rejects_symlink_sources(self):
+        linked = installer.PROFILE_THEME.parent.parent / "linked"
+        linked.symlink_to(installer.PROFILE_THEME.parent, target_is_directory=True)
+        self.assertNotIn("linked", installer.available_themes())
+        with self.assertRaisesRegex(installer.InstallError, "unknown theme"):
+            installer.apply(self.config, self.state, False, "linked")
+
     def test_apply_restore_preserves_unrelated_settings(self):
         self.settings().parent.mkdir(parents=True)
         self.settings().write_text(json.dumps({"unrelated": "keep", "managed": 0}))
@@ -83,10 +115,10 @@ class InstallerTests(unittest.TestCase):
         real_inputs = installer.installation_inputs
         calls = 0
 
-        def inputs_after_source_changes(home):
+        def inputs_after_source_changes(home, theme_name="celeste"):
             nonlocal calls
             calls += 1
-            value = real_inputs(home)
+            value = real_inputs(home, theme_name)
             if calls == 1:
                 installer.PROFILE_SETTINGS.write_text(json.dumps({"themePath": "@THEME@", "managed": 9}))
             return value

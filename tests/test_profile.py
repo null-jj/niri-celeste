@@ -15,13 +15,26 @@ def luminance(color):
 
 class ProfileTests(unittest.TestCase):
     def test_text_pairs_have_readable_contrast_in_both_modes(self):
-        theme = json.loads((ROOT / 'themes/celeste/theme.json').read_text())
-        for mode in ('dark', 'light'):
-            for background, foreground in [('primary', 'primaryText'), ('surface', 'surfaceText'),
-                                           ('surfaceVariant', 'surfaceVariantText'), ('background', 'backgroundText')]:
-                high, low = sorted([luminance(theme[mode][foreground]), luminance(theme[mode][background])], reverse=True)
-                with self.subTest(mode=mode, foreground=foreground):
-                    self.assertGreaterEqual((high + 0.05) / (low + 0.05), 4.5)
+        for source in (ROOT / 'themes').glob('*/theme.json'):
+            theme = json.loads(source.read_text())
+            for mode in ('dark', 'light'):
+                for background, foreground in [('primary', 'primaryText'), ('surface', 'surfaceText'),
+                                               ('surfaceVariant', 'surfaceVariantText'), ('background', 'backgroundText')]:
+                    high, low = sorted([luminance(theme[mode][foreground]), luminance(theme[mode][background])], reverse=True)
+                    with self.subTest(theme=source.parent.name, mode=mode, foreground=foreground):
+                        self.assertGreaterEqual((high + 0.05) / (low + 0.05), 4.5)
+
+    def test_all_themes_have_complete_light_and_dark_palettes(self):
+        reference = json.loads((ROOT / 'themes/celeste/theme.json').read_text())
+        for source in (ROOT / 'themes').glob('*/theme.json'):
+            theme = json.loads(source.read_text())
+            self.assertEqual(set(theme), {'dark', 'light'})
+            for mode in ('dark', 'light'):
+                with self.subTest(theme=source.parent.name, mode=mode):
+                    self.assertEqual(set(theme[mode]), set(reference[mode]))
+                    for key, value in theme[mode].items():
+                        if key not in ('name', 'matugen_type'):
+                            self.assertRegex(value, r'^#[0-9A-Fa-f]{6}$')
 
     def test_portable_profile_avoids_personal_session_data(self):
         profile = json.loads((ROOT / 'profile/settings.json').read_text())

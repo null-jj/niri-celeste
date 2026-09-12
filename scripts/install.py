@@ -101,14 +101,28 @@ def replace_theme_token(value: object, theme_path: Path) -> object:
     return value
 
 
-def installation_inputs(config_home: Path) -> tuple[bytes, bytes, bytes, dict[str, object], dict[str, object]]:
+def available_themes() -> list[str]:
+    return sorted(path.parent.name for path in PROFILE_THEME.parent.parent.glob("*/theme.json")
+                  if path.is_file() and not path.is_symlink() and not path.parent.is_symlink())
+
+
+def theme_source(name: str) -> Path:
+    if name not in available_themes():
+        raise InstallError(f"unknown theme {name!r}; choose from: {', '.join(available_themes())}")
+    path = PROFILE_THEME.parent.parent / name / "theme.json"
+    reject_symlink_components(path, "theme source")
+    return path
+
+
+def installation_inputs(config_home: Path, theme_name: str = "celeste") -> tuple[bytes, bytes, bytes, dict[str, object], dict[str, object]]:
+    selected_theme = theme_source(theme_name)
     overrides_bytes = read_regular(PROFILE_SETTINGS, "profile settings")
-    theme_bytes = read_regular(PROFILE_THEME, "profile theme")
+    theme_bytes = read_regular(selected_theme, "profile theme")
     wallpaper_bytes = read_regular(PROFILE_WALLPAPER, "profile wallpaper")
     if overrides_bytes is None or theme_bytes is None or wallpaper_bytes is None:
         raise InstallError("profile/settings.json, theme.json, and wallpapers/celeste.svg must exist")
     overrides = validate_json(overrides_bytes, str(PROFILE_SETTINGS))
-    validate_json(theme_bytes, str(PROFILE_THEME))
+    validate_json(theme_bytes, str(selected_theme))
     if not isinstance(overrides, dict):
         raise InstallError("profile/settings.json must contain a JSON object")
     defaults_bytes = read_regular(PROFILE_DEFAULTS, "profile defaults")
@@ -239,10 +253,10 @@ def validate_niri_example() -> bytes:
     return contents
 
 
-def apply(config_home: Path, state_home: Path, with_niri: bool) -> int:
+def apply(config_home: Path, state_home: Path, with_niri: bool, theme_name: str = "celeste") -> int:
     targets = target_paths(config_home, with_niri)
     def build_desired() -> tuple[dict[str, bytes], dict[str, object], dict[str, object]]:
-        desired_settings, desired_theme, desired_wallpaper, owned, defaults = installation_inputs(config_home)
+        desired_settings, desired_theme, desired_wallpaper, owned, defaults = installation_inputs(config_home, theme_name)
         desired = {"settings": desired_settings, "theme": desired_theme, "wallpaper": desired_wallpaper}
         if with_niri:
             desired["niri"] = validate_niri_example()
@@ -406,9 +420,9 @@ def restore(config_home: Path, state_home: Path) -> int:
     return 0
 
 
-def plan(config_home: Path, with_niri: bool) -> int:
+def plan(config_home: Path, with_niri: bool, theme_name: str = "celeste") -> int:
     targets = target_paths(config_home, with_niri)
-    settings, theme, wallpaper, owned, defaults = installation_inputs(config_home)
+    settings, theme, wallpaper, owned, defaults = installation_inputs(config_home, theme_name)
     desired = {"settings": settings, "theme": theme, "wallpaper": wallpaper}
     if with_niri:
         desired["niri"] = validate_niri_example()
@@ -453,7 +467,8 @@ def doctor() -> int:
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("plan", "apply", "restore", "doctor"), nargs="?", default="plan")
+    parser.add_argument("command", choices=("plan", "apply", "restore", "doctor", "themes"), nargs="?", default="plan")
+    parser.add_argument("--theme", metavar="NAME", help="palette for plan/apply (default: celeste); list with 'themes'")
     home = Path.home()
     config_env = Path(os.environ["XDG_CONFIG_HOME"]) if os.environ.get("XDG_CONFIG_HOME") else None
     state_env = Path(os.environ["XDG_STATE_HOME"]) if os.environ.get("XDG_STATE_HOME") else None
@@ -462,18 +477,25 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--config-home", type=Path, default=config_default)
     parser.add_argument("--state-home", type=Path, default=state_default)
     parser.add_argument("--with-niri", action="store_true", help="also install the example niri config when no config exists")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.theme is not None and args.command not in ("plan", "apply"):
+        parser.error("--theme is supported only with plan or apply")
+    return args
 
 
 def main(argv: list[str]) -> int:
     args = parse_args(argv)
     try:
         if args.command == "plan":
-            return plan(args.config_home, args.with_niri)
+            return plan(args.config_home, args.with_niri, args.theme or "celeste")
         if args.command == "apply":
-            return apply(args.config_home, args.state_home, args.with_niri)
+            return apply(args.config_home, args.state_home, args.with_niri, args.theme or "celeste")
         if args.command == "restore":
             return restore(args.config_home, args.state_home)
+        if args.command == "themes":
+            for name in available_themes():
+                print(name)
+            return 0
         return doctor()
     except InstallError as exc:
         print(f"error: {exc}", file=sys.stderr)

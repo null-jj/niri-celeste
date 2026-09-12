@@ -6,7 +6,7 @@ Celeste is a configuration distribution. It owns visual choices and installation
 | --- | --- |
 | `profile/settings.json` | Top-level DMS overrides; nested objects and arrays intentionally replace their corresponding setting |
 | `profile/defaults.json` | Upstream v1.6.1 defaults for sparse-settings comparison |
-| `themes/celeste/theme.json` | Complete dark and light palettes |
+| `themes/NAME/theme.json` | Complete dark and light palettes; six original theme families |
 | `wallpapers/celeste.svg` | Original scalable wallpaper |
 | `examples/niri/config.kdl` | Optional self-contained starter; hardware auto-detection and generic shell shortcuts |
 | `scripts/install.py` | Local file transaction, backup, plan, conflict detection, restore, doctor |

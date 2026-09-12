@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="970" viewBox="0 0 1000 970">
+<rect width="1000" height="970" rx="24" fill="#101216"/>
+<g font-family="Noto Sans, sans-serif">
+<text x="32" y="44" font-size="22" fill="#eeeeee">Six palettes. Two ways to see each.</text>
+<rect x="32" y="72" width="456" height="128" rx="18" fill="#15131C" stroke="#82788F" stroke-opacity=".5"/>
+<text x="52" y="106" font-size="18" fill="#EEE8F5">Celeste · Night</text>
+<text x="52" y="132" font-size="12" fill="#C7BFD3">Dark / #C4B5FD</text>
+<rect x="52" y="152" width="37" height="28" rx="8" fill="#100F16" stroke="#82788F" stroke-opacity=".3"/>
+<rect x="99" y="152" width="37" height="28" rx="8" fill="#201C29" stroke="#82788F" stroke-opacity=".3"/>
+<rect x="146" y="152" width="37" height="28" rx="8" fill="#2B2635" stroke="#82788F" stroke-opacity=".3"/>
+<rect x="193" y="152" width="37" height="28" rx="8" fill="#C4B5FD" stroke="#82788F" stroke-opacity=".3"/>
+<rect x="240" y="152" width="37" height="28" rx="8" fill="#AECED1" stroke="#82788F" stroke-opacity=".3"/>
+<rect x="360" y="150" width="108" height="32" rx="16" fill="#C4B5FD"/>
+<text x="414" y="171" text-anchor="middle" font-size="13" fill="#211A38">Aa 123</text>
+<rect x="512" y="72" width="456" height="128" rx="18" fill="#FAF7FF" stroke="#7C7288" stroke-opacity=".5"/>
+<text x="532" y="106" font-size="18" fill="#211D29">Celeste · Dawn</text>
+<text x="532" y="132" font-size="12" fill="#4C4557">Light / #63508B</text>
+<rect x="532" y="152" width="37" height="28" rx="8" fill="#F5F0FA" stroke="#7C7288" stroke-opacity=".3"/>
+<rect x="579" y="152" width="37" height="28" rx="8" fill="#EEE7F4" stroke="#7C7288" stroke-opacity=".3"/>
+<rect x="626" y="152" width="37" height="28" rx="8" fill="#E7DFEF" stroke="#7C7288" stroke-opacity=".3"/>
+<rect x="673" y="152" width="37" height="28" rx="8" fill="#63508B" stroke="#7C7288" stroke-opacity=".3"/>
+<rect x="720" y="152" width="37" height="28" rx="8" fill="#3C676C" stroke="#7C7288" stroke-opacity=".3"/>
+<rect x="840" y="150" width="108" height="32" rx="16" fill="#63508B"/>
+<text x="894" y="171" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+<rect x="32" y="217" width="456" height="128" rx="18" fill="#101C27" stroke="#7C95A7" stroke-opacity=".5"/>
+<text x="52" y="251" font-size="18" fill="#E2EEF7">Ocean · Night</text>
+<text x="52" y="277" font-size="12" fill="#BDCEDA">Dark / #A7D3F4</text>
+<rect x="52" y="297" width="37" height="28" rx="8" fill="#0C141C" stroke="#7C95A7" stroke-opacity=".3"/>
+<rect x="99" y="297" width="37" height="28" rx="8" fill="#1B2B38" stroke="#7C95A7" stroke-opacity=".3"/>
+<rect x="146" y="297" width="37" height="28" rx="8" fill="#283B4A" stroke="#7C95A7" stroke-opacity=".3"/>
+<rect x="193" y="297" width="37" height="28" rx="8" fill="#A7D3F4" stroke="#7C95A7" stroke-opacity=".3"/>
+<rect x="240" y="297" width="37" height="28" rx="8" fill="#A8D8CE" stroke="#7C95A7" stroke-opacity=".3"/>
+<rect x="360" y="295" width="108" height="32" rx="16" fill="#A7D3F4"/>
+<text x="414" y="316" text-anchor="middle" font-size="13" fill="#102B3C">Aa 123</text>
+<rect x="512" y="217" width="456" height="128" rx="18" fill="#F7FBFF" stroke="#718A9B" stroke-opacity=".5"/>
+<text x="532" y="251" font-size="18" fill="#172C3A">Ocean · Day</text>
+<text x="532" y="277" font-size="12" fill="#405967">Light / #285E7D</text>
+<rect x="532" y="297" width="37" height="28" rx="8" fill="#F0F7FC" stroke="#718A9B" stroke-opacity=".3"/>
+<rect x="579" y="297" width="37" height="28" rx="8" fill="#E5EFF6" stroke="#718A9B" stroke-opacity=".3"/>
+<rect x="626" y="297" width="37" height="28" rx="8" fill="#DAE7F0" stroke="#718A9B" stroke-opacity=".3"/>
+<rect x="673" y="297" width="37" height="28" rx="8" fill="#285E7D" stroke="#718A9B" stroke-opacity=".3"/>
+<rect x="720" y="297" width="37" height="28" rx="8" fill="#356A62" stroke="#718A9B" stroke-opacity=".3"/>
+<rect x="840" y="295" width="108" height="32" rx="16" fill="#285E7D"/>
+<text x="894" y="316" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+<rect x="32" y="362" width="456" height="128" rx="18" fill="#162019" stroke="#81947D" stroke-opacity=".5"/>
+<text x="52" y="396" font-size="18" fill="#E7EFE2">Forest · Night</text>
+<text x="52" y="422" font-size="12" fill="#C5D0BD">Dark / #B2D8AE</text>
+<rect x="52" y="442" width="37" height="28" rx="8" fill="#101711" stroke="#81947D" stroke-opacity=".3"/>
+<rect x="99" y="442" width="37" height="28" rx="8" fill="#233025" stroke="#81947D" stroke-opacity=".3"/>
+<rect x="146" y="442" width="37" height="28" rx="8" fill="#303F31" stroke="#81947D" stroke-opacity=".3"/>
+<rect x="193" y="442" width="37" height="28" rx="8" fill="#B2D8AE" stroke="#81947D" stroke-opacity=".3"/>
+<rect x="240" y="442" width="37" height="28" rx="8" fill="#D9CD9F" stroke="#81947D" stroke-opacity=".3"/>
+<rect x="360" y="440" width="108" height="32" rx="16" fill="#B2D8AE"/>
+<text x="414" y="461" text-anchor="middle" font-size="13" fill="#16351E">Aa 123</text>
+<rect x="512" y="362" width="456" height="128" rx="18" fill="#F9FCF4" stroke="#7B8E73" stroke-opacity=".5"/>
+<text x="532" y="396" font-size="18" fill="#202D20">Forest · Day</text>
+<text x="532" y="422" font-size="12" fill="#4A5B44">Light / #3C663C</text>
+<rect x="532" y="442" width="37" height="28" rx="8" fill="#F3F7ED" stroke="#7B8E73" stroke-opacity=".3"/>
+<rect x="579" y="442" width="37" height="28" rx="8" fill="#E7EFDE" stroke="#7B8E73" stroke-opacity=".3"/>
+<rect x="626" y="442" width="37" height="28" rx="8" fill="#DDE7D3" stroke="#7B8E73" stroke-opacity=".3"/>
+<rect x="673" y="442" width="37" height="28" rx="8" fill="#3C663C" stroke="#7B8E73" stroke-opacity=".3"/>
+<rect x="720" y="442" width="37" height="28" rx="8" fill="#70633B" stroke="#7B8E73" stroke-opacity=".3"/>
+<rect x="840" y="440" width="108" height="32" rx="16" fill="#3C663C"/>
+<text x="894" y="461" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+<rect x="32" y="507" width="456" height="128" rx="18" fill="#241A15" stroke="#AA8B76" stroke-opacity=".5"/>
+<text x="52" y="541" font-size="18" fill="#F8E8DC">Ember · Night</text>
+<text x="52" y="567" font-size="12" fill="#DBC3B2">Dark / #F2BD95</text>
+<rect x="52" y="587" width="37" height="28" rx="8" fill="#1A120F" stroke="#AA8B76" stroke-opacity=".3"/>
+<rect x="99" y="587" width="37" height="28" rx="8" fill="#33261E" stroke="#AA8B76" stroke-opacity=".3"/>
+<rect x="146" y="587" width="37" height="28" rx="8" fill="#443329" stroke="#AA8B76" stroke-opacity=".3"/>
+<rect x="193" y="587" width="37" height="28" rx="8" fill="#F2BD95" stroke="#AA8B76" stroke-opacity=".3"/>
+<rect x="240" y="587" width="37" height="28" rx="8" fill="#DFC68E" stroke="#AA8B76" stroke-opacity=".3"/>
+<rect x="360" y="585" width="108" height="32" rx="16" fill="#F2BD95"/>
+<text x="414" y="606" text-anchor="middle" font-size="13" fill="#422410">Aa 123</text>
+<rect x="512" y="507" width="456" height="128" rx="18" fill="#FFFAF6" stroke="#A38B78" stroke-opacity=".5"/>
+<text x="532" y="541" font-size="18" fill="#38271C">Ember · Day</text>
+<text x="532" y="567" font-size="12" fill="#6A5140">Light / #945025</text>
+<rect x="532" y="587" width="37" height="28" rx="8" fill="#FFF6EF" stroke="#A38B78" stroke-opacity=".3"/>
+<rect x="579" y="587" width="37" height="28" rx="8" fill="#F7E7D9" stroke="#A38B78" stroke-opacity=".3"/>
+<rect x="626" y="587" width="37" height="28" rx="8" fill="#EEDCCE" stroke="#A38B78" stroke-opacity=".3"/>
+<rect x="673" y="587" width="37" height="28" rx="8" fill="#945025" stroke="#A38B78" stroke-opacity=".3"/>
+<rect x="720" y="587" width="37" height="28" rx="8" fill="#766027" stroke="#A38B78" stroke-opacity=".3"/>
+<rect x="840" y="585" width="108" height="32" rx="16" fill="#945025"/>
+<text x="894" y="606" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+<rect x="32" y="652" width="456" height="128" rx="18" fill="#241921" stroke="#A48699" stroke-opacity=".5"/>
+<text x="52" y="686" font-size="18" fill="#F8E4EE">Rose · Night</text>
+<text x="52" y="712" font-size="12" fill="#D8BECE">Dark / #F0B2CB</text>
+<rect x="52" y="732" width="37" height="28" rx="8" fill="#1A1118" stroke="#A48699" stroke-opacity=".3"/>
+<rect x="99" y="732" width="37" height="28" rx="8" fill="#332630" stroke="#A48699" stroke-opacity=".3"/>
+<rect x="146" y="732" width="37" height="28" rx="8" fill="#45333F" stroke="#A48699" stroke-opacity=".3"/>
+<rect x="193" y="732" width="37" height="28" rx="8" fill="#F0B2CB" stroke="#A48699" stroke-opacity=".3"/>
+<rect x="240" y="732" width="37" height="28" rx="8" fill="#CBBCE8" stroke="#A48699" stroke-opacity=".3"/>
+<rect x="360" y="730" width="108" height="32" rx="16" fill="#F0B2CB"/>
+<text x="414" y="751" text-anchor="middle" font-size="13" fill="#411A2B">Aa 123</text>
+<rect x="512" y="652" width="456" height="128" rx="18" fill="#FFFAFC" stroke="#A18495" stroke-opacity=".5"/>
+<text x="532" y="686" font-size="18" fill="#38232E">Rose · Day</text>
+<text x="532" y="712" font-size="12" fill="#6B4E5E">Light / #914A67</text>
+<rect x="532" y="732" width="37" height="28" rx="8" fill="#FFF4F8" stroke="#A18495" stroke-opacity=".3"/>
+<rect x="579" y="732" width="37" height="28" rx="8" fill="#F5E5ED" stroke="#A18495" stroke-opacity=".3"/>
+<rect x="626" y="732" width="37" height="28" rx="8" fill="#EAD8E2" stroke="#A18495" stroke-opacity=".3"/>
+<rect x="673" y="732" width="37" height="28" rx="8" fill="#914A67" stroke="#A18495" stroke-opacity=".3"/>
+<rect x="720" y="732" width="37" height="28" rx="8" fill="#655185" stroke="#A18495" stroke-opacity=".3"/>
+<rect x="840" y="730" width="108" height="32" rx="16" fill="#914A67"/>
+<text x="894" y="751" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+<rect x="32" y="797" width="456" height="128" rx="18" fill="#191A1D" stroke="#8C909A" stroke-opacity=".5"/>
+<text x="52" y="831" font-size="18" fill="#EDEEF0">Graphite · Night</text>
+<text x="52" y="857" font-size="12" fill="#CACCD2">Dark / #CDD1DA</text>
+<rect x="52" y="877" width="37" height="28" rx="8" fill="#121315" stroke="#8C909A" stroke-opacity=".3"/>
+<rect x="99" y="877" width="37" height="28" rx="8" fill="#27292D" stroke="#8C909A" stroke-opacity=".3"/>
+<rect x="146" y="877" width="37" height="28" rx="8" fill="#34363C" stroke="#8C909A" stroke-opacity=".3"/>
+<rect x="193" y="877" width="37" height="28" rx="8" fill="#CDD1DA" stroke="#8C909A" stroke-opacity=".3"/>
+<rect x="240" y="877" width="37" height="28" rx="8" fill="#C7C9CC" stroke="#8C909A" stroke-opacity=".3"/>
+<rect x="360" y="875" width="108" height="32" rx="16" fill="#CDD1DA"/>
+<text x="414" y="896" text-anchor="middle" font-size="13" fill="#252931">Aa 123</text>
+<rect x="512" y="797" width="456" height="128" rx="18" fill="#FBFCFE" stroke="#858B96" stroke-opacity=".5"/>
+<text x="532" y="831" font-size="18" fill="#23262C">Graphite · Day</text>
+<text x="532" y="857" font-size="12" fill="#515660">Light / #505967</text>
+<rect x="532" y="877" width="37" height="28" rx="8" fill="#F4F5F7" stroke="#858B96" stroke-opacity=".3"/>
+<rect x="579" y="877" width="37" height="28" rx="8" fill="#E9EBF0" stroke="#858B96" stroke-opacity=".3"/>
+<rect x="626" y="877" width="37" height="28" rx="8" fill="#DFE2E8" stroke="#858B96" stroke-opacity=".3"/>
+<rect x="673" y="877" width="37" height="28" rx="8" fill="#505967" stroke="#858B96" stroke-opacity=".3"/>
+<rect x="720" y="877" width="37" height="28" rx="8" fill="#555A61" stroke="#858B96" stroke-opacity=".3"/>
+<rect x="840" y="875" width="108" height="32" rx="16" fill="#505967"/>
+<text x="894" y="896" text-anchor="middle" font-size="13" fill="#FFFFFF">Aa 123</text>
+</g>
+</svg>

@@ -1,6 +1,6 @@
 # Celeste for Niri
 
-A Caelestia-inspired desktop profile for **Niri + DankMaterialShell**. Floating, animated Island panels, lavender accents on charcoal surfaces, pill workspaces, Noto Sans typography, and an original orbital landscape wallpaper. Includes matching light and dark palettes.
+A Caelestia-inspired desktop profile for **Niri + DankMaterialShell**. Floating, animated Island panels, pill workspaces, Noto Sans typography, and an original orbital landscape wallpaper. Includes six original themes, each with matching light and dark palettes.
 
 ![Celeste running on Niri](docs/images/desktop.png)
 
@@ -65,9 +65,34 @@ Restore reverses the latest successful apply. It restores profile-owned settings
 
 Changing a wallpaper with IPC is not rolled back by this command; reselect your previous wallpaper before restoring, since restore removes the installed wallpaper if Celeste created it.
 
+## Themes
+
+![Six paired light and dark palettes](docs/images/themes.svg)
+
+| Name | Dark palette | Light palette |
+| --- | --- | --- |
+| `celeste` | Charcoal and lavender | Soft lilac and plum |
+| `ocean` | Deep navy and sky blue | Cool white and ocean blue |
+| `forest` | Pine and sage | Cream and woodland green |
+| `ember` | Espresso and apricot | Warm ivory and burnt orange |
+| `rose` | Mulberry and blush | Rose white and berry |
+| `graphite` | Carbon and silver | Chalk and slate |
+
+```sh
+./install.sh themes
+./install.sh plan --theme ocean
+./install.sh apply --theme ocean
+```
+
+Choose dark or light mode in DMS settings, or use `dms ipc call theme dark` / `dms ipc call theme light`. Selecting a palette preserves your current light/dark mode and wallpaper.
+
+`apply --theme NAME` applies the complete Celeste profile with that palette, including the documented bar layout. The selected file is copied to the stable installed path `DankMaterialShell/themes/celeste/theme.json`; its displayed name reflects the selected palette. `restore` returns the previous palette and profile settings. Repeating apply with the same `--theme` is idempotent. Omitting `--theme` selects `celeste`, so repeat the option when updating an alternative theme.
+
+For a color-only change through the DMS GUI, choose Custom and select a `themes/NAME/theme.json` file from your checkout. That uses the file directly; keep the checkout at that location. Each file contains both variants, and none adds a daemon or runtime dependency.
+
 ## Customize
 
-- Edit `themes/celeste/theme.json` for both palettes.
+- Edit `themes/NAME/theme.json` for that theme's two palettes. Add another folder with `theme.json` to extend the theme list.
 - Edit `profile/settings.json` for typography, spacing, motion, and bar composition; then run plan/apply.
 - The center Island uses media and a full weekday/month date, with 12px group spacing, a slim pill, and a 16px top gap. Battery, volume, brightness, and notifications stay in the right-side controls. DMS sizes the center width to its content; customize its groups in `islandHomeLayout`.
 - For a conventional full bar, set `barConfigs[0].island` to `false` in the profile. The same widget layout is supplied for that mode.
